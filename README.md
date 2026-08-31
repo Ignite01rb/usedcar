@@ -1,113 +1,36 @@
-# 🏎️ AutoValuate AI — Used Car Price Predictor
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A modern, machine learning-driven web application designed and built by **Raaghav Bisht** to estimate used car market resale values in India based on key vehicle parameters.
+## Getting Started
 
-![AutoValuate AI Hero](assets/landingpage.png)
+First, run the development server:
 
----
-
-## ✨ Features
-
-- 🤖 **Machine Learning Intelligence**: Powered by scikit-learn Linear Regression pipeline with numerical standard scaling and log-transformed target optimization.
-- 💰 **INR Currency Formatting**: Outputs estimations in Indian Rupee format (Lakhs / Thousands) with realistic valuation ranges (±5%).
-- ⚡ **Instant Presets**: Pre-configured single-click options for popular Indian cars (Maruti Swift, Hyundai Creta, Honda City).
-- 🎨 **Modern Next.js & Tailwind UI**: Responsive glassmorphism aesthetic built with Next.js 15, TypeScript, Lucide Icons, and React Hook Form with Zod validation.
-- 🔌 **RESTful Flask Backend API**: Clean Python 3 backend API with CORS support, health metrics, and numerical validation.
-
----
-
-## 📊 Model Performance Metrics
-
-The ML regression model was trained on the `Cardetails.csv` dataset containing over 8,000 real Indian car listings:
-
-| Metric | Score |
-| :--- | :--- |
-| **R² Score** | **0.8143 (81.43%)** |
-| **Adjusted R² Score** | **0.8117** |
-| **Mean Absolute Error (MAE)** | **0.2326** |
-| **Root Mean Squared Error (RMSE)** | **0.3117** |
-
----
-
-## 🛠️ Tech Stack
-
-### **Frontend**
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom Glassmorphism utilities
-- **State & Forms**: React Hook Form + Zod validation schema
-- **HTTP Client**: Axios
-
-### **Backend & Machine Learning**
-- **Environment**: Python 3
-- **Framework**: Flask + Flask-CORS
-- **ML Libraries**: scikit-learn, Pandas, NumPy
-- **Model Pipeline**: `ColumnTransformer` (`StandardScaler` + `OrdinalEncoder`) & `LinearRegression`
-
----
-
-## 🚀 Local Installation & Setup Guide
-
-### 1. Prerequisites
-- Python 3.10+
-- Node.js 18+ & npm/yarn
-
-### 2. Backend Setup (Flask API)
 ```bash
-# Create and activate Python virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install backend dependencies
-pip install -r requirements.txt
-
-# (Optional) Retrain ML Model if needed
-python train_model.py
-
-# Start Flask Backend Server (Runs on http://127.0.0.1:5000)
-python app.py
-```
-
-### 3. Frontend Setup (Next.js Application)
-```bash
-# Open client directory
-cd client
-
-# Install Node dependencies
-npm install
-
-# Start Next.js Development Server (Runs on http://localhost:3000)
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open `http://localhost:3000` in your web browser to use the app!
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📁 Repository Structure
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```
-Used-Car-Price-Prediction/
-├── client/                     # Next.js 15 Frontend
-│   ├── app/                    # Next.js App Router (Landing & Dashboard)
-│   ├── components/             # UI Components (Buttons, Dialogs, Cards)
-│   └── lib/                    # Axios API client & Zod Form validations
-├── app.py                      # Flask API Server (/predict, /health)
-├── train_model.py              # ML Model Training & Export Script
-├── car_price_model.pkl         # Trained Scikit-Learn Pipeline
-├── Cardetails.csv              # Training Dataset
-└── Car_Price_Prediction.ipynb # Jupyter Notebook for Data Analysis
-```
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 👤 Author
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Raaghav Bisht**  
-- Portfolio / GitHub: [Raaghav Bisht](https://github.com/)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 📄 License
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
