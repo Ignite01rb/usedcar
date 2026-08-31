@@ -8,11 +8,10 @@ __pycache__/
 
 # Node & Next.js
 node_modules/
-client/node_modules/
-client/.next/
-client/out/
-client/build/
-client/next-env.d.ts
+.next/
+out/
+build/
+next-env.d.ts
 
 # Logs & OS
 *.log
