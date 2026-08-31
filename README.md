@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚗 Used Car Price Predictor AI
 
-## Getting Started
+A Machine Learning powered web application that estimates used car market resale prices with **93.97% accuracy (R² Score)**. Built and designed by **Raaghav Bisht**.
 
-First, run the development server:
+---
 
+## 🌟 Visual Preview
+
+### 🏠 Landing Page
+![Landing Page](assets/landingpage.png)
+
+### 📊 Resale Price Calculator Dashboard
+![Calculator Dashboard](assets/dashboard.png)
+
+---
+
+## ✨ Features
+
+- 🎯 **High Accuracy Prediction**: Ensemble Voting Regressor (`RandomForestRegressor` + `HistGradientBoostingRegressor`) achieving a **93.97% R² Score** and an average error of ~₹58,500.
+- 🚘 **Brand & Model Precision**: Specific matching for major Indian car brands (Maruti, Hyundai, Honda, Toyota, Tata, Mahindra, etc.) and model series (e.g. Swift Dzire, Creta, City, Nexon).
+- 📅 **Extended Year Support**: Fully supports manufacturing years up to **2026**.
+- 💰 **INR Price Output**: Automatically formats valuation predictions into Indian Rupees (`₹6.69 Lakhs`).
+- ⚡ **Lightweight Model**: ML pipeline compressed to **5.67 MB** (`joblib.dump(..., compress=3)`) for GitHub compatibility.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS, Lucide Icons, Shadcn UI.
+- **Backend API**: Python 3, Flask, Flask-CORS, Gunicorn.
+- **Machine Learning**: Scikit-Learn, Pandas, NumPy, Joblib.
+- **Dataset**: `Cardetails.csv` (8,000+ Indian vehicle listings).
+
+---
+
+## 🚀 Quick Setup & Local Execution
+
+### 1. Run Backend API
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
 ```
+*(Runs on `http://127.0.0.1:5001`)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run Next.js Frontend
+```bash
+npm install
+npm run dev
+```
+*(Runs on `http://localhost:3000`)*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deploying to Production
 
-## Learn More
+- **Frontend (Vercel)**: Import `Ignite01rb/usedcar` on Vercel. Set `NEXT_PUBLIC_API_URL` to your backend API URL.
+- **Backend (PythonAnywhere / HuggingFace / Render)**: Deploy `app.py` with `requirements.txt`.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed with ❤️ by **Raaghav Bisht**
