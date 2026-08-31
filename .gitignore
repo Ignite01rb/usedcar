@@ -1,0 +1,21 @@
+# Python & Virtual Environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node & Next.js
+node_modules/
+client/node_modules/
+client/.next/
+client/out/
+client/build/
+client/next-env.d.ts
+
+# Logs & OS
+*.log
+.DS_Store
+.env
+.env.local
